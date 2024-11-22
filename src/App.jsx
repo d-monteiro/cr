@@ -1,5 +1,29 @@
 import { useState } from 'react'
 
+const teamMembers = [
+  {
+    name: "Pedro Marques",
+    image: "/pedro.png?height=400&width=300",
+    linkedin: "#"
+  },
+  {
+    name: "Leandro Sampaio",
+    image: "/leandro.png?height=400&width=300",
+    linkedin: "#"
+  },
+  {
+    name: "Mariana Almeida",
+    image: "/mariana.png?height=400&width=300",
+    linkedin: "#"
+  },
+  {
+    name: "Duarte Monteiro",
+    image: "/duarte.png?height=400&width=300",
+    linkedin: "#"
+  }
+];
+
+
 function App() {
   return (
     <div className="bg-gray-100">
@@ -18,7 +42,7 @@ function App() {
         <div className="w-1/4 h-64 bg-blue-600 rounded-lg"></div>
         <div className="w-1/4 h-64 bg-yellow-200 rounded-lg"></div>
       </div>
-    </header>
+      </header>
 
 
       {/* Card Section */}
@@ -28,25 +52,33 @@ function App() {
         </h2>
         <div className="flex justify-center space-x-8">
           <div className="bg-white p-6 rounded-lg shadow-md w-64">
-            <div className="text-gray-500 mb-4">Icon</div>
-            <h3 className="font-bold text-lg">Gestão <br /> Institucional</h3>
+            <div className="flex flex-col items-start text-gray-500 mb-4">
+              <img src="/src/assets/icon1.png" alt="Icon" className="h-8 w-8 mb-2" />
+              <h3 className="font-bold text-lg text-black">Gestão <br /> Institucional</h3>
+            </div>
             <p className="text-gray-600 mt-2">
               Coordenar a eleição para Diretor da FEUP e aprovar a reorganização interna e alterações estruturais da instituição.
             </p>
           </div>
+          
           <div className="bg-yellow-100 p-6 rounded-lg shadow-md w-64">
-            <div className="text-gray-500 mb-4">Icon</div>
-            <h3 className="font-bold text-lg">Supervisão <br /> e Avaliação</h3>
-            <p className="text-gray-600 mt-2">
-              Apreciar atos do Diretor e do Conselho Executivo, promovendo uma gestão responsável e transparente.
-            </p>
+            <div className="flex flex-col items-start text-gray-500 mb-4">
+              <img src="/src/assets/icon2.png" alt="Icon" className="h-8 w-8 mb-2" />
+              <h3 className="font-bold text-lg text-black">Supervisão <br /> e Avaliação</h3>
+            </div>
+              <p className="text-gray-600 mt-2">
+                Apreciar atos do Diretor e do Conselho Executivo, promovendo uma gestão responsável e transparente.
+              </p>
           </div>
+
           <div className="bg-white p-6 rounded-lg shadow-md w-64">
-            <div className="text-gray-500 mb-4">Icon</div>
-            <h3 className="font-bold text-lg">Desenvolvimento Estratégico</h3>
-            <p className="text-gray-600 mt-2">
-              Propor iniciativas para melhorar o funcionamento da FEUP e decidir sobre medidas em unidades de investigação.
-            </p>
+            <div className="flex flex-col items-start text-gray-500 mb-4">
+              <img src="/src/assets/icon3.png" alt="Icon" className="h-8 w-8 mb-2" />
+              <h3 className="font-bold text-lg text-black">Desenvolvimento Estratégico</h3>
+            </div>
+              <p className="text-gray-600 mt-2">
+                Promover o desenvolvimento estratégico da instituição através de iniciativas inovadoras e sustentáveis.
+              </p>
           </div>
         </div>
       </section>
@@ -105,6 +137,55 @@ function App() {
           </div>
         </div>
       </section>
+
+      <div className="min-h-screen bg-white p-8">
+      {/* Team Section */}
+      <section className="container mx-auto flex items-center justify-between mb-32">
+        <div className="space-y-2">
+          <h1 className="text-4xl font-bold">
+            2 de dezembro
+          </h1>
+          <p className="text-4xl font-bold text-blue-600">
+            Vota A!
+          </p>
+        </div>
+        <div>
+          <img 
+            src="/team.png?height=300&width=500" 
+            alt="Team photo"
+            className="w-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-16">
+          Conhece a Equipa
+        </h2>
+        
+        <div className="grid grid-cols-4 gap-8">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-white rounded-3xl shadow-lg overflow-hidden mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
+              <h3 className="font-medium text-lg">{member.name}</h3>
+              <a 
+                href={member.linkedin}
+                className="text-gray-600 hover:text-blue-600 text-sm"
+              >
+                LinkedIn
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+      </div>
     </div>
   )
 }
