@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 
 function App() {
   return (
@@ -78,8 +76,11 @@ function App() {
           <div className="flex items-center bg-yellow-100 p-8 rounded-lg shadow-md">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-yellow-600">Dar uma Voz aos Estudantes</h3>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 mt-2 font-bold">
                 Criar uma FEUP + Inclusiva.
+              </p>
+              <p className="text-gray-600 mt-2 ">
+                Promover uma representação próxima da realidade dos <br /> estudantes, disponibilizando um formulário de preenchimento aberto, <br /> que demonstra o nosso compromisso com a voz dos estudantes.
               </p>
             </div>
             <div className="w-32 h-32 bg-gray-300 rounded-full"></div>
@@ -87,8 +88,17 @@ function App() {
           <div className="flex items-center bg-blue-100 p-8 rounded-lg shadow-md">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-blue-600">Promover a Transparência</h3>
+              <p className="text-gray-600 mt-2 font-bold">
+                Meritocracia
+              </p>
               <p className="text-gray-600 mt-2">
-                Meritocracia e Abertura.
+                Promover a transparência dos processos  eleitorais das organizações estudantis. <br /> Quebrando os monopólios e práticas anti-democráticas.
+              </p>
+              <p className="text-gray-600 mt-2 font-bold">
+                Abertura
+              </p>
+              <p className="text-gray-600 mt-2">
+                Publicar uma  newsletter mensal enviada através de email <br /> institucional dinâmico, partilhando atualizações claras e objetivas <br /> sobre as nossas decis~pes e os seus impactos.
               </p>
             </div>
             <div className="w-32 h-32 bg-gray-300 rounded-full"></div>
