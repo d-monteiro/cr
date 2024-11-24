@@ -90,7 +90,7 @@ const CarouselMission = () => {
             className="w-full flex-shrink-0 px-4"
             style={{ flexBasis: "100%" }}
             animate={{
-              height: expandedIndex === index ? "80vh" : "30vh",
+              height: expandedIndex === index ? "80vh" : "35vh",
               scale: expandedIndex === index ? 1.05 : 1,
               opacity: expandedIndex === index ? 1 : 0.9, 
             }}
@@ -127,7 +127,7 @@ const CarouselMission = () => {
                   bottom: expandedIndex === index ? "2vh" : "0vh",
                 }}
                 animate={{
-                  height: expandedIndex === index ? "20vh" : "18vh",
+                  height: expandedIndex === index ? "20vh" : index === 0 ? "18vh" : "15vh",
                   opacity: 1,
                   scale: 1,
                 }}

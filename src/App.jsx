@@ -10,10 +10,10 @@ import megaPhoneSvg from "./assets/megaPhone.svg";
 import balloonSvg from "./assets/balloon.svg";
 import vectorBackgroundYellowSvg from "./assets/vectorBackgroundYellow.svg";
 import teamImageSvg from "./assets/teamImage.svg";
-import duarteSvg from './assets/duarte.svg'
-import leandroSvg from './assets/leandro.svg'
-import pedroSvg from './assets/pedro.svg'
-import marianaSvg from './assets/mariana.svg'
+import duarteSvg from './assets/duarte.png'
+import leandroSvg from './assets/leandro.png'
+import pedroSvg from './assets/pedro.png'
+import marianaSvg from './assets/mariana.png'
 import CarouselCr from "./components/carouselCr";
 import CarouselMission from "./components/carouselMission";
 
@@ -278,7 +278,7 @@ function App() {
             <img
               src={megaPhoneSvg}
               alt="Foreground"
-              className="absolute inset-0 m-auto w-auto h-full object-contain z-10"
+              className="absolute inset-0 m-auto w-auto h-4/5 object-contain z-10"
             />
             <div className="absolute bottom-[4vh] right-[2vw] border-t-[2px] border-[#FFCE2F] w-1/4"></div>
           </div>
@@ -389,27 +389,19 @@ function App() {
     Conhece a Equipa
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:pb-20 pb-[25vh] ">
-   {teamMembers.map((member, index) => (
-     <div
-       key={index}
-       className="text-center flex flex-col items-center w-4/5 mx-auto"
-     >
-       <img
-         src={member.image}
-         alt={member.name}
-         className="h-full w-auto md:h-3/4 object-cover rounded-full"
-       />
-       <h3 className="font-medium text-lg md:mt-4 -mt-[2vh]">{member.name}</h3>
-       <a
-         href={member.linkedin}
-         className="text-gray-600 hover:text-blue-600 text-sm mt-2"
-       >
-         LinkedIn
-       </a>
-     </div>
-   ))}
- </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    {teamMembers.map((member) => (
+      <div key={member.name} className="flex flex-col md:items-start items-center space-y-2">
+        <img src={member.image} alt={member.name} className="h-3/4 w-auto object-cover" />
+        <div className="pl-4 w-3/4">
+          <h2 className="text-lg font-semibold">{member.name}</h2>
+          <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
 
 </section>
 
