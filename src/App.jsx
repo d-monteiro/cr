@@ -14,6 +14,8 @@ import duarteSvg from './assets/duarte.svg'
 import leandroSvg from './assets/leandro.svg'
 import pedroSvg from './assets/pedro.svg'
 import marianaSvg from './assets/mariana.svg'
+import CarouselCr from "./components/carouselCr";
+import CarouselMission from "./components/carouselMission";
 
 const teamMembers = [
   {
@@ -43,25 +45,45 @@ function App() {
     <div className="bg-[#FBFAF9]">
       {/* Header Section */}
       <img
-        src={logoSvg}
-        alt="Example SVG"
-        className="h-[49px] w-[129] absolute left top m-12"
-      />
-      <header className="flex justify-between items-center h-screen w-full py-16 px-24 bg-white">
-        <div className="w-3/5">
-          <h1 className="text-6xl font-medium text-gray-800">
-            Transparência. <br />
-            Inovação. <br />
-            <span className="text-blue-600">Inclusão.</span>
-          </h1>
-        </div>
-        <div className="w-3/5 flex space-x-2">
-          <img src={mainSvg} alt="Example SVG" className="w-full h-auto" />
-        </div>
-      </header>
+  src={logoSvg}
+  alt="Example SVG"
+  className="h-[6vh] w-auto absolute top left m-12 md:mx-20"
+/>
+
+<header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
+  <div className="w-full md:w-3/5 text-left pt-24 md:pt-0 mx-12">
+    <h1 className="text-5xl md:text-6xl font-medium text-gray-800 pt-8 md:pt-20">
+      Transparência. <br />
+      Inovação. <br />
+      <span className="text-blue-600">Inclusão.</span>
+    </h1>
+  </div>
+  <div className="w-full md:w-3/5 m-0 flex justify-center justify-items-center mt-16 relative">
+
+  
+  
+  <img
+    src={mainSvg}
+    alt="Example SVG"
+    className="w-4/5 md:w-full h-auto mx-auto p-0 relative z-1"
+  />
+</div>
+<img
+    src={vectorBackgroundYellowSvg}
+    alt="Background"
+    className="absolute bottom-0 right-0 w-[70vw] h-auto z-0 object-cover blur-xl md:hidden"
+  />
+</header>  
+
+    <div className="w-full md:hidden h-[80vh]">
+    <h2 className="text-center text-2xl font-semibold py-[7vh]">
+          O que é o Conselho de Representantes?
+        </h2>
+    <CarouselCr></CarouselCr>
+    </div>
 
       {/* Card Section */}
-      <section className="py-20">
+      <section className="py-20 md:block hidden">
         <h2 className="text-center text-2xl font-semibold mb-[15vh]">
           O que é o Conselho de Representantes?
         </h2>
@@ -142,8 +164,18 @@ function App() {
 
       {/* Mission Section */}
 
-      <section className="py-16 px-16 bg-white">
-        <h2 className="text-center text-2xl font-semibold mb-[10vh]">
+      <div className="w-full h-auto relative">
+  <div className="w-full md:hidden h-auto pb-[7vh]">
+    <h2 className="text-center text-2xl font-semibold py-[7vh]">
+      A nossa Missão
+    </h2>
+    <CarouselMission />
+  </div>
+</div>
+
+
+      <section className="py-16 px-16 bg-white md:block hidden">
+        <h2 className="text-center text-2xl font-semibold my-[10vh]">
           A nossa Missão
         </h2>
 
@@ -305,77 +337,82 @@ function App() {
         </div>
       </section>
 
-      <section className="w-full flex items-center relative pt-20">
-        <div className="relative flex items-center w-5/6 mx-auto p-8 rounded-lg">
-          <div className="absolute inset-0 flex left items-center">
-            <img
-              src={vectorBackgroundYellowSvg}
-              alt="Background"
-              className="w-3/4 h-3/4 object-cover blur-xl"
-            />
-          </div>
+      <section className="w-full flex flex-col md:flex-row items-center relative mt-[5vh]">
+  <div className="relative md:w-4/5 w-full flex flex-col md:flex-row items-center w-5/6 mx-auto p-8 rounded-lg">
+    {/* Background Image */}
+    <div className="absolute inset-0 flex justify-center items-center z-0">
+      <img
+        src={vectorBackgroundYellowSvg}
+        alt="Background"
+        className="w-2/3 h-auto object-cover blur-xl"
+      />
+    </div>
 
-          <div className="relative z-10 flex-1 space-y-4 pl-8">
-            <h1
-              className="font-[500] text-[3.5em] leading-[60px] tracking-[-0.01em]"
-              style={{
-                fontFamily: "Outfit, sans-serif",
-                textUnderlinePosition: "from-font",
-                textDecorationSkipInk: "none",
-              }}
-            >
-              2 de dezembro
-            </h1>
-            <p
-              className="font-[500] text-[3.5em] leading-[60px] tracking-[-0.01em] text-blue-600"
-              style={{
-                fontFamily: "Outfit, sans-serif",
-                textUnderlinePosition: "from-font",
-                textDecorationSkipInk: "none",
-              }}
-            >
-              Vota A!
-            </p>
-          </div>
+    {/* Title Section */}
+    <div className="w-full relative z-10 flex flex-col items-center md:items-start text-center md:text-left space-y-4 pl-0 md:pl-8 mb-4 md:mb-0">
+      <h1
+        className="font-[500] text-[2.5em] md:text-[3.5em] leading-[40px] md:leading-[60px] tracking-[-0.01em]"
+        style={{
+          fontFamily: "Outfit, sans-serif",
+          textUnderlinePosition: "from-font",
+          textDecorationSkipInk: "none",
+        }}
+      >
+        2 de dezembro
+      </h1>
+      <p
+        className="font-[500] text-[2.5em] md:text-[3.5em] leading-[40px] md:leading-[60px] tracking-[-0.01em] text-blue-600"
+        style={{
+          fontFamily: "Outfit, sans-serif",
+          textUnderlinePosition: "from-font",
+          textDecorationSkipInk: "none",
+        }}
+      >
+        Vota A!
+      </p>
+    </div>
 
-          <div className="relative -mr-12 flex-shrink-0 w-[60%] z-1">
-            <img
-              src={teamImageSvg}
-              alt="Team photo"
-              className="w-full h-auto object-contain rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+    {/* Image Section */}
+    <div className="relative z-10 flex-shrink-0 w-full md:w-[60%]">
+      <img
+        src={teamImageSvg}
+        alt="Team photo"
+        className="w-full h-auto object-contain rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
-      {/* Team Section */}
-      <section className="container mx-auto pt-24">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Conhece a Equipa
-        </h2>
+     {/* Team Section */}
+<section className="container mx-auto pt-24">
+  <h2 className="text-3xl font-bold text-center mb-12">
+    Conhece a Equipa
+  </h2>
 
-        <div className="grid grid-cols-4 gap-4 pb-20">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="text-center">
-              
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-auto h-3/4 object-cover"
-                />
-           
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:pb-20 pb-[25vh] ">
+   {teamMembers.map((member, index) => (
+     <div
+       key={index}
+       className="text-center flex flex-col items-center w-4/5 mx-auto"
+     >
+       <img
+         src={member.image}
+         alt={member.name}
+         className="h-full w-auto md:h-3/4 object-cover rounded-full"
+       />
+       <h3 className="font-medium text-lg md:mt-4 -mt-[2vh]">{member.name}</h3>
+       <a
+         href={member.linkedin}
+         className="text-gray-600 hover:text-blue-600 text-sm mt-2"
+       >
+         LinkedIn
+       </a>
+     </div>
+   ))}
+ </div>
 
-              <h3 className="font-medium text-lg">{member.name}</h3>
-              <a
-                href={member.linkedin}
-                className="text-gray-600 hover:text-blue-600 text-sm"
-              >
-                LinkedIn
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
+</section>
+
     </div>
   );
 }
