@@ -53,8 +53,8 @@ function App() {
 <header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
   <div className="absolute top-0 right-0 mt-10 mr-4 md:mr-16">
     <a href="https://tally.so/r/3qYW4Y" target="_blank">
-    <button className="bg-blue-600 text-white py-2 px-4 md:py-3 md:px-5 rounded-xl text-sm md:text-lg font-semibold">
-        Formulário de sugestões
+    <button className="bg-blue-600 text-white py-2 px-4 md:py-3 md:px-5 rounded-3xl text-sm md:text-lg font-medium">
+        <p style={{ fontFamily: "Outfit, sans-serif" }}>Formulário de sugestões</p>
       </button>
     </a>
   </div>
