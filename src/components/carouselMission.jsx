@@ -90,7 +90,7 @@ const CarouselMission = () => {
             className="w-full flex-shrink-0 px-4"
             style={{ flexBasis: "100%" }}
             animate={{
-              height: isExpanded ? "80vh" : "35vh",
+              height: isExpanded ? "115vh" : "40vh",
               scale: isExpanded ? 1.05 : 1,
               opacity: isExpanded ? 1 : 0.9,
             }}
@@ -101,7 +101,7 @@ const CarouselMission = () => {
             onClick={toggleExpand}
           >
             <div
-              className="p-8 rounded-3xl w-4/5 h-full mx-auto relative"
+              className="p-8 pb-20 rounded-3xl w-4/5 h-full mx-auto relative"
               style={{ backgroundColor: slide.bgColor }}
             >
               <img
@@ -110,7 +110,7 @@ const CarouselMission = () => {
                 className="absolute top-8 right-8 h-12 w-12"
               />
               <h3
-                className="text-3xl py-20 text-left font-semibold"
+                className="text-3xl pt-20 pb-2 text-left font-semibold"
                 style={{
                   fontFamily: "Montserrat, sans-serif",
                   color: slide.textColor,
