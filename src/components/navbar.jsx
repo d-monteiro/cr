@@ -58,7 +58,7 @@ const Navbar = () => {
           <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
               <a
-                href="#"
+                href="https://ugc.production.linktr.ee/0bbead99-8930-4191-931f-d616fdd605b8_Manifesto-Lista-A.pdf"
                 className="block py-2 pl-3 pr-4 text-[#1E5BFE] md:text-black border-b border-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#1E5BFE] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                 Manifesto
@@ -66,7 +66,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://tally.so/r/3qYW4Y"
                 className="block py-2 pl-3 pr-4 text-[#1E5BFE] md:text-black border-b border-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#1E5BFE] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Formulário
@@ -74,7 +74,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.instagram.com/lista.a.crfeup?igsh=MXN5ZWxpM2theDB1Yw%3D%3D"
                 className="block py-2 pl-3 pr-4 text-[#1E5BFE] md:text-black border-b hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#1E5BFE] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Instagram
