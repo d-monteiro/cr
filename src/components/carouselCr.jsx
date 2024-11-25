@@ -10,9 +10,9 @@ const CarouselCr = () => {
     {
       id: 1,
       img: gearSvg,
-      title: "Gestão Institucional",
+      title: "Desenvolvimento Estratégico",
       description:
-        "Coordenar a eleição para Diretor da FEUP e aprovar o regulamento interno e alterações estatutárias da instituição.",
+        "Propor iniciativas para melhorar o funcionamento da FEUP e decidir sobre mudanças em unidades de investigação, após consulta ao Conselho Científico.",
     bgColor: "#FFFFFF",
       lineColor: "#4D4D4D",
       textColor: "#001635",
@@ -30,9 +30,9 @@ const CarouselCr = () => {
     {
       id: 3,
       img: puzzleSvg,
-      title: "Desenvolvimento Estratégico",
+      title: "Gestão Institucional",
       description:
-        "Propor iniciativas para melhorar o funcionamento da FEUP e decidir sobre mudanças em unidades de investigação, após consulta ao Conselho Científico.",
+        "Coordenar a eleição para Diretor da FEUP e aprovar o regulamento interno e alterações estatutárias da instituição.",
         bgColor: "#FFFFFF",
         lineColor: "#4D4D4D",
         textColor: "#2C3E50",

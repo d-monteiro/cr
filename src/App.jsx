@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mainSvg from "./assets/main.svg";
+import mainPng from "./assets/main.png";
 import logoSvg from "./assets/logo.svg";
 import clipBoardSvg from "./assets/icons/clipboard.svg";
 import gearSvg from "./assets/icons/gear.svg";
@@ -21,36 +21,44 @@ const teamMembers = [
   {
     name: "Pedro Marques",
     image: pedroSvg,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/pedromcm23/",
   },
   {
     name: "Leandro Sampaio",
     image: leandroSvg,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/leandrosampaio16/",
   },
   {
     name: "Mariana Almeida",
     image: marianaSvg,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mariana-fernandes-almeida/",
   },
   {
     name: "Duarte Monteiro",
     image: duarteSvg,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/duarte-santos-monteiro/",
   },
 ];
 
 function App() {
   return (
-    <div className="bg-[#FBFAF9]">
+  <div className="bg-[#FBFAF9]">
       {/* Header Section */}
       <img
   src={logoSvg}
   alt="Example SVG"
-  className="h-[6vh] w-auto absolute top left m-12 md:mx-20"
+  className="h-[6vh] w-auto absolute top left m-10 md:mx-14"
 />
 
 <header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
+  <div className="absolute top-0 right-0 mt-10 mr-4 md:mr-16">
+    <a href="https://tally.so/r/3qYW4Y" target="_blank">
+    <button className="bg-blue-600 text-white py-2 px-4 md:py-3 md:px-5 rounded-xl text-sm md:text-lg font-semibold">
+        Formulário de sugestões
+      </button>
+    </a>
+  </div>
+
   <div className="w-full md:w-3/5 text-left pt-24 md:pt-0 mx-12">
     <h1 className="text-5xl md:text-6xl font-medium text-gray-800 pt-8 md:pt-20">
       Transparência. <br />
@@ -63,8 +71,8 @@ function App() {
   
   
   <img
-    src={mainSvg}
-    alt="Example SVG"
+    src={mainPng}
+    alt="Team Photo"
     className="w-4/5 md:w-full h-auto mx-auto p-0 relative z-1"
   />
 </div>
@@ -99,14 +107,13 @@ function App() {
               className="text-[25px] leading-[30px] pt-20 text-left"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Supervisão e Avaliação
+              Desenvolvimento Estratégico
             </h3>
             <p
-              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#4D4D4D]"
+              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#6f6f6f] font-semibold"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Apreciar atos do Diretor e do Conselho Executivo, promovendo uma
-              gestão responsável e transparente.
+              Propor iniciativas para melhorar o funcionamento da FEUP e decidir sobre mudanças em unidades de investigação, após consulta ao Conselho Científico.
             </p>
 
             <div className="border-t-[2px] border-black w-3/4 ml-auto"></div>
@@ -126,7 +133,7 @@ function App() {
               Supervisão e Avaliação
             </h3>
             <p
-              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#4D4D4D]"
+              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#6f6f6f] font-semibold"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
               Apreciar atos do Diretor e do Conselho Executivo, promovendo uma
@@ -147,14 +154,13 @@ function App() {
               className="text-[25px] leading-[30px] pt-20 text-left"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Supervisão e Avaliação
+              Gestão Institucional
             </h3>
             <p
-              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#4D4D4D]"
+              className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left text-[#6f6f6f] font-semibold"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Apreciar atos do Diretor e do Conselho Executivo, promovendo uma
-              gestão responsável e transparente.
+              Coordenar a eleição para Diretor da FEUP e aprovar o regulamento interno e alterações estatutárias da instituição.
             </p>
 
             <div className="border-t-[2px] border-black w-3/4 ml-auto"></div>
@@ -195,25 +201,19 @@ function App() {
                 textDecorationSkipInk: "none",
               }}
             >
-              Modernizar a FEUP
+              Funcionamento da FEUP
             </h3>
             <p className="text-gray-600 mt-2 font-bold text-xl">
-              Modernizar o Ensino
+              Aumentar o número de salas de estudo
             </p>
             <p className="text-gray-600 mt-4">
-              Elevar a qualidade de ensino da FEUP, alinhando-a aos padrões das{" "}
-              <br />
-              melhores universidades globais, promovendo excelência académica{" "}
-              <br />e o sucesso profissional dos alunos, pensando no futuro.
+              De forma a promover o sucesso académico dos estudantes, promovemos a implementação de mais salas de estudo na FEUP, noturnas e de trabalho em grupo.
             </p>
             <p className="text-gray-600 mt-10 font-bold text-xl">
-              Fomentar a Inovação
+              Apostar na digitalização, modernização e acessibilidade da FEUP
             </p>
             <p className="text-gray-600 mt-4 mb-14">
-              Ampliar os incentivos financeiros e a exposição dos estudantes a{" "}
-              <br />
-              projetos pioneiros, através de hackathons, impulsionando a <br />
-              criatividade, o impacto tecnológico e social.
+              Digitalizar o cartão de estudante, permitir a compra de senhas para a cantina através de plataformas digitais e disponibilizar informação em tempo real sobre os lugares livres no parque de estacionamento.
             </p>
           </div>
           <div className="relative w-1/2 h-[50vh] mx-auto">
@@ -247,26 +247,19 @@ function App() {
                 textDecorationSkipInk: "none",
               }}
             >
-              Dar uma Voz aos Estudantes
+              Educação e Inovação
             </h3>
             <p className="text-gray-600 mt-2 font-bold text-xl">
-              Fortalecer a Representação
+              Fomentar a contratação de professores de cariz internacional e do meio empresarial
             </p>
             <p className="text-gray-600 mt-4">
-              Trabalhar para amplificar a voz dos estudantes em todas as esferas{" "}
-              <br />
-              de decisão dentro da FEUP, garantindo que as suas preocupações{" "}
-              <br />
-              sejam ouvidas e resolvidas.
+              Apostar mais na contratação de professores convidados de cariz internacional e do meio empresarial, de forma a aumentar a perceção dos estudantes quanto ao mundo real.
             </p>
             <p className="text-gray-600 mt-10 font-bold text-xl">
-              Aumentar a Inclusão
+              Participação da FEUP na Web Summit 2025
             </p>
             <p className="text-gray-600 mt-4 mb-14">
-              Criar oportunidades para que todos os estudantes,
-              independentemente <br />
-              do contexto, possam participar ativamente em iniciativas e
-              atividades.
+              Destacar o talento e o espírito inovador da FEUP com a criação de uma banca na Web Summit, seguindo a prática adotada por outras universidades portuguesas.
             </p>
           </div>
           <div className="relative w-1/2 h-[50vh] mx-auto">
@@ -300,25 +293,19 @@ function App() {
                 textDecorationSkipInk: "none",
               }}
             >
-              Modernizar a FEUP
+              Transparência e Integração
             </h3>
             <p className="text-gray-600 mt-2 font-bold text-xl">
-              Modernizar o Ensino
+              Implementação de um canal de comunicação entre os estudantes e os representantes
             </p>
             <p className="text-gray-600 mt-4">
-              Elevar a qualidade de ensino da FEUP, alinhando-a aos padrões das{" "}
-              <br />
-              melhores universidades globais, promovendo excelência académica{" "}
-              <br />e o sucesso profissional dos alunos, pensando no futuro.
+              Criar um formulário, anónimo, constantemente disponível no nosso website e redes sociais, para todos os alunos levantarem os seus problemas e preocupações que gostavam que fossem debatidos nas reuniões.
             </p>
             <p className="text-gray-600 mt-10 font-bold text-xl">
-              Fomentar a Inovação
+              Divulgação das atas das reuniões
             </p>
             <p className="text-gray-600 mt-4 mb-14">
-              Ampliar os incentivos financeiros e a exposição dos estudantes a{" "}
-              <br />
-              projetos pioneiros, através de hackathons, impulsionando a <br />
-              criatividade, o impacto tecnológico e social.
+              Por forma  aumentar a transparência, após cada reunião, divulgaremos de forma direta a ata com o que foi discutido e as mudanças apresentadas.
             </p>
           </div>
           <div className="relative w-1/2 h-[50vh] mx-auto">
@@ -333,6 +320,19 @@ function App() {
               className="absolute inset-0 m-auto w-auto h-3/5 object-contain z-10"
             />
             <div className="absolute bottom-[4vh] right-[2vw] border-t-[2px] border-[#1E5BFE] w-1/4"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section className="w-full flex flex-col md:flex-row items-center relative mt-[5vh]">
+        <div className="relative md:w-4/5 w-full flex flex-col md:flex-row items-center w-5/6 mx-auto p-8 rounded-lg">
+          {/* Background Image */}
+          <div className="absolute inset-0 flex justify-center items-center z-0">
+            <img
+              src={vectorBackgroundYellowSvg}
+              alt="Background"
+              className="w-2/3 h-auto object-cover blur-xl"
+            />
           </div>
         </div>
       </section>
