@@ -7,6 +7,12 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "flowbite": path.resolve(__dirname, "node_modules/flowbite")
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['flowbite']
+    }
+  }
 })
