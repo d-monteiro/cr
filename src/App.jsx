@@ -16,7 +16,7 @@ import pedroSvg from './assets/pedro.png'
 import marianaSvg from './assets/mariana.png'
 import CarouselCr from "./components/carouselCr";
 import CarouselMission from "./components/carouselMission";
-import HamburgerMenu from './components/hamburger';
+import Navbar from "./components/navbar";
 
 const teamMembers = [
   {
@@ -45,27 +45,19 @@ function App() {
   return (
   <div className="bg-[#FBFAF9]">
       {/* Header Section */}
-      <img
-  src={logoSvg}
-  alt="Example SVG"
-  className="h-[6vh] w-auto absolute top left m-10 md:mx-14"
-/>
+
+
+<Navbar></Navbar>
 
 <header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
-  <div className="absolute top-0 right-0 mt-10 mr-4 md:mr-16">
-  <HamburgerMenu />
-    <a href="https://tally.so/r/3qYW4Y" target="_blank">
-    <button className="bg-blue-600 text-white py-2 px-4 md:py-3 md:px-5 rounded-3xl text-sm md:text-lg font-medium">
-        <p style={{ fontFamily: "Outfit, sans-serif" }}>Formulário de sugestões</p>
-      </button>
-    </a>
-  </div>
+ 
 
-  <div className="w-full md:w-3/5 text-left pt-24 md:pt-0 mx-12">
-    <h1 className="text-5xl md:text-6xl font-medium text-gray-800 pt-8 md:pt-20">
-      Transparência. <br />
-      Inovação. <br />
-      <span className="text-blue-600">Inclusão.</span>
+  <div className="w-full md:w-3/5 text-left pt-24 md:pt-0 md:mx-12 mx-10">
+    <h1 className="text-4xl md:text-6xl font-medium text-gray-800 pt-8 md:pt-20"
+    >
+      Por Ti <br />
+      Pela Mudança <br />
+      <span className="text-blue-600">Pelo teu Futuro.</span>
     </h1>
   </div>
   <div className="w-full md:w-3/5 m-0 flex justify-center justify-items-center mt-16 relative">
@@ -73,7 +65,7 @@ function App() {
   <img
     src={mainPng}
     alt="Team Photo"
-    className="w-4/5 md:w-full h-auto mx-auto p-0 relative z-1"
+    className="w-4/5 md:w-full h-auto mx-auto p-0 relative z-10"
   />
 </div>
 
@@ -392,7 +384,9 @@ function App() {
     Conhece a Equipa
   </h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-[5vh]">
     {teamMembers.map((member) => (
       <div key={member.name} className="flex flex-col md:items-start items-center space-y-2">
         <img src={member.image} alt={member.name} className="h-3/4 w-auto object-cover" />

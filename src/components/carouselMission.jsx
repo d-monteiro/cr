@@ -90,7 +90,7 @@ const CarouselMission = () => {
             className="w-full flex-shrink-0 px-4"
             style={{ flexBasis: "100%" }}
             animate={{
-              height: isExpanded ? "100vh" : "40vh",
+              height: isExpanded ? "115vh" : "40vh",
               scale: isExpanded ? 1.05 : 1,
               opacity: isExpanded ? 1 : 0.9,
             }}
@@ -143,11 +143,11 @@ const CarouselMission = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h4 className="font-bold text-lg mt-2" style={{ color: slide.textColor }}>
+                  <h4 className="font-bold text-lg my-8" style={{ color: slide.textColor }}>
                     {slide.title1}
                   </h4>
-                  <p className="text-sm text-gray-600">{slide.description1}</p>
-                  <h4 className="font-bold text-lg mt-4" style={{ color: slide.textColor }}>
+                  <p className="text-sm text-gray-600 mb-8">{slide.description1}</p>
+                  <h4 className="font-bold text-lg mt-4 mb-8 " style={{ color: slide.textColor }}>
                     {slide.title2}
                   </h4>
                   <p className="text-sm text-gray-600">{slide.description2}</p>
