@@ -16,6 +16,7 @@ import pedroSvg from './assets/pedro.png'
 import marianaSvg from './assets/mariana.png'
 import CarouselCr from "./components/carouselCr";
 import CarouselMission from "./components/carouselMission";
+import HamburgerMenu from './components/hamburger';
 
 const teamMembers = [
   {
@@ -52,6 +53,7 @@ function App() {
 
 <header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
   <div className="absolute top-0 right-0 mt-10 mr-4 md:mr-16">
+  <HamburgerMenu />
     <a href="https://tally.so/r/3qYW4Y" target="_blank">
     <button className="bg-blue-600 text-white py-2 px-4 md:py-3 md:px-5 rounded-3xl text-sm md:text-lg font-medium">
         <p style={{ fontFamily: "Outfit, sans-serif" }}>Formulário de sugestões</p>
@@ -68,19 +70,20 @@ function App() {
   </div>
   <div className="w-full md:w-3/5 m-0 flex justify-center justify-items-center mt-16 relative">
 
-  
-  
   <img
     src={mainPng}
     alt="Team Photo"
     className="w-4/5 md:w-full h-auto mx-auto p-0 relative z-1"
   />
 </div>
+
 <img
     src={vectorBackgroundYellowSvg}
     alt="Background"
     className="absolute bottom-0 right-0 w-[70vw] h-auto z-0 object-cover blur-xl md:hidden"
   />
+
+  
 </header>  
 
     <div className="w-full md:hidden h-[80vh]">
