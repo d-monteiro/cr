@@ -90,7 +90,7 @@ const CarouselMission = () => {
             className="w-full flex-shrink-0 px-4"
             style={{ flexBasis: "100%" }}
             animate={{
-              height: isExpanded ? "115vh" : "40vh",
+              height: isExpanded ? "950px" : "300px",
               scale: isExpanded ? 1.05 : 1,
               opacity: isExpanded ? 1 : 0.9,
             }}

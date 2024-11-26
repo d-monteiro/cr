@@ -13,7 +13,7 @@ const CarouselCr = () => {
       title: "Desenvolvimento Estratégico",
       description:
         "Propor iniciativas para melhorar o funcionamento da FEUP e decidir sobre mudanças em unidades de investigação, após consulta ao Conselho Científico.",
-    bgColor: "#FFFFFF",
+      bgColor: "#FFFFFF",
       lineColor: "#4D4D4D",
       textColor: "#001635",
     },
@@ -67,51 +67,62 @@ const CarouselCr = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide) => (
-          <div
-            key={slide.id}
-            className="w-full flex-shrink-0 px-4 r-20"
-            style={{ flexBasis: "100%" }}
-          >
-            <div
-              className="p-8 rounded-2xl w-4/5 h-[45vh] mx-auto relative"
-              style={{ backgroundColor: slide.bgColor }}
-            >
-              <img
-                src={slide.img}
-                alt="Example SVG"
-                className="absolute top-8 left-8 h-[51px] w-[51px]"
-              />
-              <h3
-                className="text-[25px] leading-[30px] pt-20 text-left"
-                style={{
-                  fontFamily: "Montserrat, sans-serif",
-                  color: slide.textColor,
-                }}
-              >
-                {slide.title}
-              </h3>
-              <p
-                className="text-[14px] leading-[20.94px] pt-5 pb-16 text-left"
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  color: slide.textColor,
-                }}
-              >
-                {slide.description}
-              </p>
-              <div
-    className="absolute bottom-12 right-8 right-0 w-2/4"
-    style={{
-      borderColor: slide.lineColor,
-      borderTopWidth: "2px",
-    }}
-  ></div>
-            </div>
-          </div>
+     <div
+     key={slide.id}
+     className="w-full flex-shrink-0 px-4"
+     style={{ flexBasis: "100%" }}
+   >
+    <div
+  className="p-8 rounded-2xl w-4/5 mx-auto relative"
+  style={{
+    height: "auto", // Allow content to determine the height
+    minHeight: "40vh", 
+    backgroundColor: slide.bgColor// Ensure a minimum height
+  }}
+>
+
+       <img
+         src={slide.img}
+         alt="Example SVG"
+         className="absolute top-8 left-8 h-[51px] w-[51px]"
+       />
+       <h3
+         className="text-[25px] leading-[30px] pt-20 text-left"
+         style={{
+           fontFamily: "Montserrat, sans-serif",
+           color: slide.textColor,
+         }}
+       >
+         {slide.title}
+       </h3>
+       <p
+         className="text-[14px] leading-[20.94px] pt-5 pb-12 text-left"
+         style={{
+        
+           color: slide.textColor,
+         }}
+       >
+         {slide.description}
+       </p>
+      
+     
+     <div
+     className="w-2/4 pb-0 ml-auto"
+     style={{
+       borderColor: slide.lineColor,
+       borderTopWidth: "2px",
+       borderTopStyle: "solid",
+     }}
+   >
+   </div>
+   
+     </div>
+   </div>
+   
         ))}
       </div>
 
-      <div className="flex justify-center space-x-2 mt-4">
+      <div className="flex justify-center space-x-2 my-4">
         {slides.map((_, index) => (
           <div
             key={index}
