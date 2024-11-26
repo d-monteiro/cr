@@ -48,7 +48,7 @@ function App() {
 
 
 <Navbar></Navbar>
-
+ 
 <header className="flex flex-col md:flex-row md:justify-between md:items-center h-screen w-full py-16 md:px-24 bg-white">
  
 
