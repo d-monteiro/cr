@@ -9,7 +9,7 @@ import rocketSvg from "./assets/rocket.svg";
 import megaPhoneSvg from "./assets/megaPhone.svg";
 import balloonSvg from "./assets/balloon.svg";
 import vectorBackgroundYellowSvg from "./assets/vectorBackgroundYellow.svg";
-import teamImageSvg from "./assets/teamImage.svg";
+import teamImageSvg from "./assets/teamImage.png";
 import duarteSvg from './assets/duarte.png'
 import leandroSvg from './assets/leandro.png'
 import pedroSvg from './assets/pedro.png'
