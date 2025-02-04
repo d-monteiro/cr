@@ -1,8 +1,37 @@
-# React + Vite
+# FEUP Student Body Campaign Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the campaign website of the student body of FEUP, the representative council.
 
-Currently, two official plugins are available:
+## Project Overview
+This website is designed to provide information about the campaign for the student body of FEUP. It includes sections for candidate profiles, campaign promises, event schedules, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Vite Framework
+
+## Getting Started
+To get a local copy of the project up and running, follow these steps:
+
+### Installation
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/d-monteiro/cr.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd cr
+    ```
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Running the Project
+1. Start the local host:
+    ```sh
+    npm run dev
+    ```
+2. Open your browser and navigate to `http://localhost:5173` to view the website.
+
