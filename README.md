@@ -1,9 +1,7 @@
 # FEUP Student Body Campaign Website
 
-This repository contains the source code for the campaign website of the student body of FEUP, the representative council.
-
-## Project Overview
 This website is designed to provide information about the campaign for the student body of FEUP. It includes sections for candidate profiles, campaign promises, event schedules, and contact information.
+
 
 ## Technologies Used
 - HTML
